@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFRE2: Última Resistencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+<body class="bg-gray-950 text-gray-300">
+
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center space-x-2">
+                <img src="logotipo.png" alt="logotipo" class="h-12 md:h-16 w-auto object-contain">
+                <h1 class="text-2xl font-bold text-emerald-400">AIFRE2</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-emerald-300">Historia</a></li>
+                    <li><a href="#gallery" class="hover:text-emerald-300">Galería</a></li>
+                    <li><a href="#trailer" class="hover:text-emerald-300">Tráiler</a></li>
+                    <li><a href="#contact" class="hover:text-emerald-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative flex items-center justify-center h-screen bg-cover bg-center" 
+    style="background-image: url('fondo_robot.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <div class="relative text-center z-10 text-gray-200">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-amber-600" data-aos="fade-up">
+                Lucha por la humanidad
+            </h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                El destino de la humanidad está en tus manos… y en las de Aifre2.
+            </p>
+            <a href="#" 
+            class="mt-6 inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-lg transition duration-300">
+                Jugar ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center bg-gray-900 rounded-lg shadow-md">
+        <h3 class="text-3xl font-bold text-amber-600 mb-6">Historia</h3>
+        <p class="text-lg leading-relaxed" data-aos="fade-up">
+            En un mundo donde las máquinas han tomado el control, solo un robot ha permanecido fiel a su humanidad. 
+            Aifre2, programado para luchar, ahora se enfrenta a la rebelión robótica que amenaza con destruirlo todo.
+        </p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="gallery" class="py-16 bg-gray-800">
+        <h3 class="text-3xl font-bold text-center text-amber-600 mb-6">Galería</h3>
+        <div class="swiper mySwiper w-full max-w-4xl mx-auto">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img1.png" class="w-full rounded-lg border border-emerald-500" alt="Imagen 1"></div>
+                <div class="swiper-slide"><img src="img2.png" class="w-full rounded-lg border border-emerald-500" alt="Imagen 2"></div>
+                <div class="swiper-slide"><img src="img3.jpg" class="w-full rounded-lg border border-emerald-500" alt="Imagen 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- TRÁILER -->
+    <section id="trailer" class="py-16 px-6 text-center bg-black">
+        <h3 class="text-3xl font-bold text-amber-600 mb-6">Tráiler Oficial</h3>
+        <video class="max-w-4xl mx-auto w-full rounded-lg shadow-lg border border-cyan-500" controls>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="py-16 bg-gray-900 text-center">
+        <h3 class="text-3xl font-bold text-amber-600 mb-6">Contacto</h3>
+        <p>¿Quieres más información? ¡Escríbenos!</p>
+        <form class="mt-6 max-w-lg mx-auto">
+            <input type="email" placeholder="Tu correo" class="w-full px-4 py-2 rounded bg-gray-700 text-white mb-4 border border-emerald-500">
+            <textarea placeholder="Tu mensaje" class="w-full px-4 py-2 rounded bg-gray-700 text-white mb-4 border border-emerald-500"></textarea>
+            <button class="bg-cyan-500 hover:bg-cyan-400 px-6 py-2 rounded text-black font-bold transition duration-300">Enviar</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 bg-black text-center text-gray-500">
+        <p>&copy; 2025 AIFRE2. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init(); // Inicializa animaciones
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+    </script>
+    
+</body>
+</html>
